@@ -4,10 +4,10 @@
   "private": true,
   "proxy": {
     "/auth/google": {
-      "target": "http://localhost:5000"
+      "target": "https://nameless-basin-72571.herokuapp.com"
     },
     "/api/*": {
-      "target": "http://localhost:5000"
+      "target": "https://nameless-basin-72571.herokuapp.com"
     }
   },
   "dependencies": {
