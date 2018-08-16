@@ -4,12 +4,15 @@ const mongoose = require('mongoose');
 var cookieSession = require('cookie-session');
 const passport = require('passport');
 const keys = require('./config/keys');
+var bodyParser = require('body-parser');
 const app = express();
 require('./models/User');
 require('./services/passport');
 
 
 mongoose.connect(keys.MONGO_URI);
+
+app.use(bodyParser.json());
 
 app.use(cookieSession({
     name: 'session',
